@@ -1,0 +1,21 @@
+.sidebar {
+    border: red solid 1px;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    background-color: #36363d;
+    z-index: 10;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    color: whitesmoke;
+    font-size: large;
+}
+
+.item {
+    cursor: pointer;
+}
+
+.item:hover {
+    text-decoration: underline;
+    color: white;
+}
