@@ -1,18 +1,47 @@
-.header {
+.container {
     display: flex;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    background-color: #36363d;
     z-index: 10;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0px 0px 8px 0px;
+    background-color: black;
     padding: 1.5rem;
     gap: 1.5rem;
     color: whitesmoke;
     font-size: large;
+    height: min-content;
+    width: inherit;
+}
+
+.logo {
+    height: 100px;
+    object-fit: contain;
+
+}
+
+@media screen and (min-width:480px) {
+    .header{
+        width: unset;
+    }
+
+    .navItems {
+        display: flex;
+        gap: inherit;
+    }
 }
 
 .item {
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .item:hover {
