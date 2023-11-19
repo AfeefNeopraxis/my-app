@@ -2,10 +2,13 @@ import logo from './logo.svg';
 import './App.css';
 import ImageSlider from './Components/ImageSlider';
 import Header from './Components/Header';
+import SplashScreen from './Components/SplashScreen';
 
 function App() {
   return (
     <div className="App">
+      <SplashScreen/>
+      
       <Header/>
       
       <ImageSlider auto/>
