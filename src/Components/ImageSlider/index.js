@@ -1,5 +1,5 @@
 // Import React and useState hook
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import s from './styles.module.css'
 
 // Define the images array
@@ -10,7 +10,10 @@ const images = [
 ];
 
 // Define the ImageSlider component
-const ImageSlider = () => {
+const ImageSlider = ({
+  auto = false,
+  interval = 3000
+}) => {
   // Define the current index state
   const [current, setCurrent] = useState(0);
 
@@ -35,6 +38,14 @@ const ImageSlider = () => {
     sliderRef.current.style.transform = `translateX(-${prevIndex * 100}vw)`;
     setCurrent(prevIndex)
   };
+
+  useEffect(() => {
+    if (auto) {
+      const handleAutoPlay = setInterval(next, interval)
+
+      return () => clearInterval(handleAutoPlay);
+    }
+  }, [auto, next])
 
 
   // Return the JSX element
