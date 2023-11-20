@@ -3,6 +3,7 @@ import './App.css';
 import ImageSlider from './Components/ImageSlider';
 import Header from './Components/Header';
 import SplashScreen from './Components/SplashScreen';
+import SectionOne from './Components/Sections/One';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Header/>
       
       <ImageSlider auto/>
+
+      <SectionOne/>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

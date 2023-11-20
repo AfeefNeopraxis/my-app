@@ -2,7 +2,7 @@ import s from './style.module.css'
 
 const Header = () => {
     return (
-        <div className={s.container}>
+        <header className={s.container}>
             <div className={s.header}>
                 <img className={s.logo} src='./images/logo.png' alt='' />
                 <div className={s.navItems}>
@@ -16,7 +16,7 @@ const Header = () => {
                 ))}
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 
