@@ -4,6 +4,7 @@ import ImageSlider from './Components/ImageSlider';
 import Header from './Components/Header';
 import SplashScreen from './Components/SplashScreen';
 import SectionOne from './Components/Sections/One';
+import ImageSection from './Components/Sections/ImageSection';
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
       <ImageSlider auto/>
 
       <SectionOne/>
+
+<ImageSection/>
+
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

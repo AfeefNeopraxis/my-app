@@ -1,0 +1,88 @@
+.section {
+    background-size: cover;
+    background-position: center;
+}
+
+.row {
+    display: grid;
+    /* 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* 1 row that fits the content */
+    grid-template-rows: 1;
+    /* 10px gap between grid items */
+    gap: 50px;
+}
+
+.sectionTitle {
+    font-size: 40px;
+    line-height: 64px;
+    text-transform: uppercase;
+    float: left;
+    margin-bottom: 30px;
+    width: 100%;
+    font-weight: 100;
+    box-sizing: border-box;
+    /* Define the position and span of h4 element */
+    /* Start at column 1, end at column 2 */
+    grid-column: 1 / 2;
+    /* Start at row 1, end at row 2 */
+    grid-row: 1 / 2;
+
+}
+
+.sectionTitle::after {
+    content: "";
+    display: block;
+    background-color: white;
+    width: 50%;
+    height: 8px;
+    border-radius: 2px;
+    margin-top: 80px;
+}
+
+
+/* Define the position and span of p element */
+.content {
+    /* Start at column 2, end at column 4 */
+    grid-column: 2 / 4;
+    /* Start at row 1, end at row 2 */
+    grid-row: 1 / 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.counters{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Use media query to change the grid layout for small screens */
+@media (max-width: 768px) {
+
+    /* Make the grid container full width */
+    .row {
+        /* 1 column that takes up the whole width */
+        grid-template-columns: 1fr;
+    }
+
+    /* Make the h4 and p elements span the whole column */
+    .sectionTitle,
+    .content {
+        /* Start at column 1, end at column 2 */
+        grid-column: 1 / 2;
+    }
+
+    /* Make the p element go to the next row */
+    .content {
+        /* Start at row 2, end at row 3 */
+        grid-row: 2 / 3;
+    }
+
+    .counters{
+        flex-direction: column;
+    }
+}
