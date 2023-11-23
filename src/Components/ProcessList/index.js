@@ -5,7 +5,7 @@ const ProcessList = ({ list }) => {
             {list.map((item, index) => {
                 return (
                     <li key={index}>
-                        {item.link ? <a href={item.link}>{item}</a> : { item }}
+                        <a href={item.href ? item.href : "#"}>{item}</a>
                     </li>
                 )
             })}

@@ -5,7 +5,7 @@ import s from './one.module.css'
 
 const ButtonOne = (props) => {
     return (
-        <a className={s.button} href='www.google.com'>
+        <a className={s.button} href='#'>
             {props.name}
             <i>
                 <FontAwesomeIcon icon={faRightLong} color='white' style={{ zIndex: 2 }} />
