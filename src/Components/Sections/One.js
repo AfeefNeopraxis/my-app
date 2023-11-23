@@ -1,6 +1,6 @@
 import ButtonOne from '../Buttons/One'
 import SectionTitle from './Title'
-import s from './style.module.css'
+import s from './one.module.css'
 
 const SectionOne = () => {
     return (
@@ -30,9 +30,9 @@ const ProcessBox = () => {
         <div className={s.processBox}>
             <h3 className={s.processHeading}>Our Process</h3>
             <ul className={s.processList}>
-                {["Idea & Start", "Design & Create", "Build & Finish"].map(item => {
+                {["Idea & Start", "Design & Create", "Build & Finish"].map((item,index) => {
                     return (
-                        <li>
+                        <li key={index}>
                             <a href='#'>
                                 {item}
                             </a>
