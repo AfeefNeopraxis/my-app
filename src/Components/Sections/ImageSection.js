@@ -30,7 +30,7 @@ const ImageSection = ({
                             count:8926,
                             text:"Working hours"
                         }
-                        ].map(count => <Counter {...count} />)}
+                        ].map((count,index) => <Counter key={index} {...count} />)}
                     </div>
                 </div>
             </div>
