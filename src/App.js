@@ -1,11 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
 import ImageSlider from './Components/ImageSlider';
+import Header from './Components/Header';
+import SplashScreen from './Components/SplashScreen';
+import SectionOne from './Components/Sections/One';
+import ImageSection from './Components/Sections/ImageSection';
+import OurWorks from './Components/Sections/OurWorks';
+
 
 function App() {
   return (
     <div className="App">
-      <ImageSlider/>
+      <SplashScreen />
+
+      <Header />
+
+      <ImageSlider auto />
+
+      <SectionOne />
+
+      <ImageSection />
+
+      <OurWorks />
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

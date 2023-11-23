@@ -1,0 +1,45 @@
+.button{
+    position: relative;
+    display: inline-flex;
+    background-color: transparent;
+    border: solid black 1px;
+    padding: 1rem 3rem;
+    margin: 1rem 0rem;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    transition: all 200ms ease-in-out;
+}
+
+.button:hover::before{
+    width: 100%;
+}
+
+.button i{
+    pointer-events: none;
+    position: absolute;
+    color: white;
+    height: 100%;
+    width: 100%;
+    top:-100%;
+    left: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transition:all 200ms linear;
+}
+
+.button:hover i{
+    top:0
+}

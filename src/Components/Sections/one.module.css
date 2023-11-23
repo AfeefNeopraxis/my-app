@@ -1,0 +1,63 @@
+.section {
+    background-color: white;
+}
+
+.image {
+    height: 100%;
+    width: 50%;
+    /* aspect-ratio: 3/4; */
+    overflow: hidden;
+    max-height: 70vh;
+}
+
+.content {
+    width: 100%;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.section p {
+    font-weight: 300;
+}
+
+@media only screen and (max-width:640px) {
+    .image {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Process Box */
+/* CSS styles declaration for the new component 'Process Box' starts here */
+
+.processBox {
+    float: left;
+    width: 100%;
+    margin-top: 60px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.processBox::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 80px;
+    height: 8px;
+    background: #000;
+}
+
+.processHeading {
+    float: left;
+    width: 100%;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: left;
+    padding-bottom: 30px;
+}

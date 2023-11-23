@@ -1,0 +1,25 @@
+.splash {
+    z-index: 99;
+    position: fixed;
+    inset: 0;
+    display: flex;
+    pointer-events: none;
+    background-color: black;
+    animation: splash 2s ease-in-out .5s 1 forwards;
+}
+
+.splash img {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+@keyframes splash {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
