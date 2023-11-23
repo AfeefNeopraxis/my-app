@@ -1,4 +1,5 @@
 import ButtonOne from '../Buttons/One'
+import ProcessList from '../ProcessList'
 import SectionTitle from './Title'
 import s from './one.module.css'
 
@@ -29,17 +30,7 @@ const ProcessBox = () => {
     return (
         <div className={s.processBox}>
             <h3 className={s.processHeading}>Our Process</h3>
-            <ul className={s.processList}>
-                {["Idea & Start", "Design & Create", "Build & Finish"].map((item,index) => {
-                    return (
-                        <li key={index}>
-                            <a href='#'>
-                                {item}
-                            </a>
-                        </li>
-                    )
-                })}
-            </ul>
+            <ProcessList list={["Idea & Start", "Design & Create", "Build & Finish"]}/>
             <ButtonOne name={"View Our Portfolio"} />
         </div>
     )
