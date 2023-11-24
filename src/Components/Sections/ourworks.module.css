@@ -1,0 +1,28 @@
+.section{
+    background-color: white;
+    flex-direction: column;
+}
+
+.section::before{
+    display: block;
+    position: relative;
+    content: '';
+    background-color: black;
+    width: 25%;
+    height: 8px;
+    border-radius: 4px;
+    top: 160px;
+}
+
+
+@media only screen and (max-width:640px) {
+    .section::before {
+        top:130px /* Inorder to avoid the overlap of  under line in small screen */
+    }
+}
+
+.image{
+    max-width: 800px;
+    width: 100%;
+    aspect-ratio: 16/9;
+}

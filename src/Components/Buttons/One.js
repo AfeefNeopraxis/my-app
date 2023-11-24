@@ -1,10 +1,16 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightLong } from '@fortawesome/free-solid-svg-icons'
+
 import s from './one.module.css'
 
 const ButtonOne = (props) => {
-    return(
-        <button className={s.button}>
+    return (
+        <a className={s.button} href='#'>
             {props.name}
-        </button>
+            <i>
+                <FontAwesomeIcon icon={faRightLong} color='white' style={{ zIndex: 2 }} />
+            </i>
+        </a>
     )
 }
 
